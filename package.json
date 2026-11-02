@@ -1,0 +1,35 @@
+{
+ "name": "keycraft",
+ "version": "1.0.0",
+ "description": "Shortcuts for Windows, Linux and macOS",
+ "main": "main.js",
+ "author": "Umar Raufi",
+ "scripts": {
+  "start": "electron .",
+  "build:win": "electron-builder --win nsis",
+  "build:linux": "electron-builder --linux AppImage",
+  "build:mac": "electron-builder --mac dmg"
+ },
+ "devDependencies": {
+  "electron": "^33.0.0",
+  "electron-builder": "^25.0.0"
+ },
+ "build": {
+  "appId": "com.umar.keycraft",
+  "productName": "KeyCraft",
+  "files": [
+   "main.js",
+   "index.html",
+   "icon.png",
+   "icon.svg",
+   "manifest.json",
+   "sw.js"
+  ],
+  "win": {
+   "icon": "icon.png"
+  },
+  "linux": {
+   "category": "Utility"
+  }
+ }
+}
